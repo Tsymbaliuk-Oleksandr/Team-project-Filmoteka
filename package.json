@@ -1,0 +1,39 @@
+{
+  "name": "group-hw2-placeholder",
+  "version": "1.0.0",
+  "description": "Group HW2 Markup Placeholder",
+  "scripts": {
+    "start": "parcel src/*.html",
+    "build": "parcel build src/*.html --public-url /Team-project-Filmoteka/"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Tsymbaliuk-Oleksandr/Team-project-Filmoteka"
+  },
+  "author": "MuffMuffin",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/MuffMuffin/group-hw2-placeholder/issues"
+  },
+  "homepage": "https://am1007.github.io/filmoteka_PG-13/",
+  "dependencies": {
+    "animate.css": "^4.1.1",
+    "axios": "^1.1.3",
+    "canvas-confetti": "^1.6.0",
+    "firebase": "^9.12.1",
+    "handlebars": "^4.7.7",
+    "modern-normalize": "^1.1.0",
+    "node": "^19.0.0",
+    "notiflix": "^3.2.5"
+  },
+  "devDependencies": {
+    "@parcel/transformer-sass": "^2.6.0",
+    "buffer": "^6.0.3",
+    "parcel": "^2.6.0",
+    "parcel-reporter-clean-dist": "^1.0.4",
+    "posthtml-include": "^1.7.4",
+    "process": "^0.11.10",
+    "swiper": "^8.4.4"
+  },
+  "browserslist": "> 0.5%, last 2 versions, not dead"
+}

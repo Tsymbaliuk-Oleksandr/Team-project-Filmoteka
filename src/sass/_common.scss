@@ -1,0 +1,143 @@
+body {
+  background-color: $main--background;
+  color: $main--text;
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 1.33;
+  transition: all 0.8s ease-out;
+
+  &.dark__theme {
+    background-color: #303030;
+  }
+
+  &.dark__theme .up-btn {
+    fill: $white-color;
+  }
+}
+.trailer__visible {
+  overflow-y: hidden;
+}
+.container {
+  margin: 0 auto;
+  width: 100%;
+  padding-left: 32px;
+  padding-right: 32px;
+
+  @media screen and (max-width: 767px) {
+    width: 320px;
+  }
+
+  @media screen and (min-width: 768px) and (max-width: 1279px) {
+    width: 768px;
+  }
+
+  @media screen and (min-width: 1280px) {
+    width: 1280px;
+  }
+}
+
+body.modal-open {
+  overflow: hidden;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+ul {
+  list-style: none;
+}
+
+.button {
+  display: block;
+  text-align: center;
+  border: 1px solid $main--text;
+  border-radius: 5px;
+  padding: 0;
+  background-color: transparent;
+  color: $main--text;
+  text-transform: uppercase;
+
+  &:hover,
+  &:focus {
+    background-color: $main--accent;
+    border-color: $main--accent;
+    color: $main--background;
+  }
+}
+
+.is-hidden {
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+}
+
+.label-w {
+  &::before {
+    content: "";
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+    background-color: #ff6b08;
+    position: absolute;
+    bottom: 4px;
+    right: 40px;
+    @media screen and (max-width: 767px) {
+      bottom: 2px;
+      right: 37px;
+    }
+
+    @media screen and (min-width: 768px) and (max-width: 1279px) {
+      bottom: 2px;
+      right: 37px;
+    }
+  }
+  &::after {
+    content: "W";
+    bottom: 4px;
+    right: 44px;
+    position: absolute;
+    color: white;
+    @media screen and (min-width: 1280px) {
+      font-size: 18;
+    }
+  }
+}
+.label-q {
+  &::before {
+    content: "";
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+    background-color: #ff6b08;
+    position: absolute;
+    bottom: 4px;
+    right: 6px;
+    @media screen and (max-width: 767px) {
+      bottom: 2px;
+      right: 5px;
+    }
+
+    @media screen and (min-width: 768px) and (max-width: 1279px) {
+      bottom: 2px;
+      right: 5px;
+    }
+  }
+  &::after {
+    content: "Q";
+    bottom: 5px;
+    right: 12px;
+    position: absolute;
+    color: white;
+    @media screen and (min-width: 1280px) {
+      font-size: 18;
+    }
+  }
+}
+
+.gallery__card {
+  position: relative;
+}

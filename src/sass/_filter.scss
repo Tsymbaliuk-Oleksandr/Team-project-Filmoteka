@@ -1,0 +1,95 @@
+.searchBtn {
+  display: block;
+  text-align: center;
+  border: 1px solid white;
+  border-radius: 5px;
+  background-color: transparent;
+  position: absolute;
+  top: 150px;
+  margin: 15px auto 0;
+  padding: 10px 15px;
+  color: #ffffff;
+  transition: background-color 300ms ease-out, border 300ms ease-out;
+
+  &:hover,
+  &:focus {
+    border-color: $main--accent;
+    box-shadow: 0px 0px 10px 5px rgb(255, 107, 8);
+  }
+}
+
+.searchBtn.active {
+  background-color: $main--accent;
+  border: 1px solid $main--accent;
+}
+
+.filter {
+  background-color: rgba(67, 24, 6, 0.659);
+  display: flex;
+  flex-direction: column;
+  opacity: 0;
+  visibility: hidden;
+  transition: 400ms opacity, 400ms visibility;
+  align-items: center;
+  position: absolute;
+  z-index: 2;
+  width: 100%;
+  @include mq(tablet) {
+    flex-direction: row;
+  }
+}
+
+.filter.active {
+  opacity: 1;
+  visibility: visible;
+  z-index: 5;
+}
+
+.tags {
+  width: 80%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  margin: 10px auto;
+}
+
+.tag {
+  color: #ffffff;
+  padding: 10px 20px;
+  background-color: #ffab73;
+  border-radius: 5px;
+  margin: 5px;
+  display: inline-block;
+  cursor: pointer;
+
+  body.dark__theme & {
+    color: #000;
+  }
+}
+
+.tag:hover {
+  box-shadow: 0px 0px 10px 5px rgb(255, 107, 8);
+}
+
+.tag.highlight {
+  background-color: $main--accent;
+}
+
+.clear {
+  background-color: red;
+  opacity: 1;
+  visibility: visible;
+  transition: 400ms opacity, 400ms visibility;
+  margin-top: -5px;
+  margin-bottom: 10px;
+  @include mq(tablet) {
+    margin: 0 15px 0 0;
+  }
+}
+
+.clear.hidden {
+  opacity: 0;
+  visibility: hidden;
+  transition: 400ms opacity, 400ms visibility;
+}

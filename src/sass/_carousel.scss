@@ -1,0 +1,113 @@
+.carousel {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  padding-top: 20px;
+
+  &__container {
+    display: inherit;
+    height: 40px;
+
+    @media screen and (max-width: 767px) {
+      width: 280px;
+      margin-bottom: 40px;
+    }
+
+    @media screen and (min-width: 768px) {
+      width: 374px;
+      margin-bottom: 60px;
+    }
+  }
+
+  &__left,
+  &__right {
+    cursor: pointer;
+    display: inherit;
+    justify-content: center;
+    align-items: center;
+    width: 40px;
+    height: 40px;
+    border-radius: 5px;
+    background-color: $secondary--background;
+    border: 1px solid $black-color;
+
+    &.hidden {
+      display: none;
+    }
+
+    &:hover {
+      background-color: $main--accent;
+      border: none;
+
+      & img {
+        filter: invert(1);
+      }
+    }
+
+    body.dark__theme & {
+      background-color: $secondary--text;
+
+      &:hover {
+        background-color: $main--accent;
+        border: none;
+      }
+    }
+
+    &.disabled {
+      opacity: 0.1;
+      pointer-events: none;
+    }
+  }
+
+  &__right {
+    img {
+      transform: scaleX(-1);
+    }
+  }
+
+  &__content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex: 1;
+    height: 100%;
+    gap: 10px;
+
+    & * {
+      cursor: pointer;
+      display: inherit;
+      justify-content: inherit;
+      align-items: inherit;
+      height: 100%;
+      padding: 0 3px;
+
+      &.hidden {
+        display: none;
+      }
+    }
+  }
+
+  &__number {
+    &.selected {
+      width: 40px;
+      border-radius: 5px;
+      background-color: $main--accent;
+      color: $main--background;
+    }
+
+    &.more__left,
+    &.more__right {
+      padding-bottom: 9px;
+    }
+
+    &:hover {
+      transform: scale(1.3);
+      transition: transform 500ms;
+      animation: animate75 3000ms infinite 1000ms;
+    }
+
+    body.dark__theme & {
+      color: rgb(216, 213, 213);
+    }
+  }
+}

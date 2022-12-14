@@ -1,0 +1,84 @@
+.footer {
+  background-color: #f7f7f7;
+  color: #545454;
+  padding-top: 29px;
+  padding-bottom: 29px;
+  transition: background-color 500ms cubic-bezier(0.4, 0, 0.2, 1),
+    color 500ms cubic-bezier(0.4, 0, 0.2, 1);
+
+  @include mq(tablet) {
+    padding-top: 30px;
+    padding-bottom: 30px;
+    display: flex;
+    align-items: center;
+  }
+
+  @include mq(desktop) {
+    padding-bottom: 28px;
+  }
+
+  body.dark__theme & {
+    color: $white-color;
+    background-color: #272424;
+  }
+}
+
+.footer-text {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  @include center;
+  @include mq(tablet) {
+    @include center;
+  }
+  @media screen and (max-width: 767px) {
+    flex-direction: column;
+  }
+}
+
+.footer-text__link {
+  color: $footer-text-color;
+  text-decoration: underline;
+  margin-left: 4px;
+  transition: color 500ms cubic-bezier(0.4, 0, 0.2, 1);
+
+  body.dark__theme & {
+    color: $white-color;
+  }
+}
+
+.footer-text__up {
+  @include center;
+  @include fonts;
+  letter-spacing: normal;
+
+  @include mq(tablet) {
+    font-size: 16px;
+  }
+}
+
+.footer-text__up:nth-child(2) {
+  margin-top: 10px;
+
+  @include mq(tablet) {
+    margin-left: 4px;
+    margin-right: 0px;
+    margin-top: 0px;
+  }
+}
+
+.footer-text__icon {
+  margin: 0 10px;
+}
+
+.animate__heartBeat {
+  animation-duration: 1500ms;
+  animation-iteration-count: infinite;
+  animation-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.wrap {
+  min-height: 100vh;
+  display: grid;
+  grid-template-rows: auto 1fr auto;
+}

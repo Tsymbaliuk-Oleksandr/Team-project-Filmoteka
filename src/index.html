@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Filmoteka</title>
+    <!-- Add your crossorigin preconnects to api and image server here -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="../node_modules/modern-normalize/modern-normalize.css"
+    />
+    <link rel="stylesheet" href="css/reset.css" />
+
+    <link rel="stylesheet" href="./sass/index.scss" />
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+    />
+
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./img/favicon-32x32.png"
+    />
+  </head>
+  <body class="home watched">
+    <include src="./partials/header.html"></include>
+    <include src="./partials/slider.html"></include>
+    <include src="./partials/main.html"></include>
+    <include src="./partials/footer.html"></include>
+    <include src="./partials/modal.html"></include>
+    <include src="./partials/modal-team.html"></include>
+    <include src="./partials/spinner.html"></include>
+    <script src="index.js" type="module"></script>
+  </body>
+</html>
